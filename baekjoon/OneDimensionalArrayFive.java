@@ -19,6 +19,7 @@ public class OneDimensionalArrayFive {
                 i++;
             }
         }
+
         for(int b : arr)
             sb.append(b).append(" ");
         System.out.println(sb);
