@@ -20,12 +20,13 @@ public class Seven {
             }
 
             arr[st.charAt(j) - 'a'] = 1;
+
             for (j = 1; j < st.length(); j++) {
                 int m = st.charAt(j) - 'a';
                 if (arr[m] == 0) {
                     arr[m] = 1;
                 } else {
-                    if (st.charAt(j - 1) != m) {
+                    if ((st.charAt(j - 1) - 'a') != m) {
                         break;
                     }
                 }
