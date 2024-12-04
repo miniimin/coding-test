@@ -5,13 +5,14 @@ import java.util.*;
 public class Five {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
 
-        int minX;
-        int maxX;
-        int minY;
-        int maxY;
+        int minX = 0;
+        int maxX = 0;
+        int minY = 0;
+        int maxY = 0;
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < n; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
             int x = Integer.parseInt(st.nextToken());
             int y = Integer.parseInt(st.nextToken());
@@ -25,14 +26,17 @@ public class Five {
             }
 
             if (x <= minX) {
-
-            }else (x >= maxX) {
-
+                minX = x;
+            }else if (x >= maxX) {
+                maxX = x;
             }
 
-
+            if (y <= minY) {
+                minY = y;
+            }else if (y >= maxY) {
+                maxY = y;
+            }
         }
-
         System.out.print((maxX - minX) * (maxY - minY));
     }
 }
