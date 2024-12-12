@@ -14,17 +14,17 @@ public class Nine {
             arr[i] = br.readLine();
         }
 
-        for (int i = 0; i < n; i++) {
-            for (char c : arr[i].toCharArray()) {
-                System.out.print(c - 'a' + " ");
+        Arrays.sort(arr, (a, b) -> {
+            if (a.length() == b.length()) {
+                return a.compareTo(b);
+            } else {
+                return Integer.compare(a.length(), b.length());
             }
-            System.out.println();
-        }
+        });
 
         for (int i = 0; i < n; i++) {
             sb.append(arr[i]).append("\n");
         }
-
         System.out.println(sb);
     }
 }
