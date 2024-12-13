@@ -20,7 +20,6 @@ public class One {
         int m = Integer.parseInt(br.readLine());
         StringTokenizer st2 = new StringTokenizer(br.readLine());
 
-
         for (int i = 0; i < m; i++) {
             int x = Integer.parseInt(st2.nextToken());
             sb.append(set.contains(x)? 1 : 0).append(" ");
