@@ -6,6 +6,7 @@ import java.util.*;
 public class Eight {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
         int t = Integer.parseInt(br.readLine());
 
         while (t-- > 0) {
